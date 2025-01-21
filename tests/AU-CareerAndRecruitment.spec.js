@@ -7,7 +7,7 @@ import path from 'path';
 
 const testdata = JSON.parse(JSON.stringify(require('../dataset/LoginPage.json')))
 
-// test.setTimeout(600000);
+ test.setTimeout(300000);
 test('Case Creation', async ({ page }) => {
     let homePage, wooliesPage;
     let caseNumber;
@@ -55,7 +55,6 @@ test('Case Creation', async ({ page }) => {
     });
 
     await wooliesPage.close();
-
     const home2 = new HomePage(homePage);
     await test.step('Verification of case details', async () => {
         await home2.clickOnUserLogout();
@@ -64,15 +63,13 @@ test('Case Creation', async ({ page }) => {
         await home2.clickOnPeopleServices();
         await home2.pageReload();
         //await page.waitForTimeout(15000);
-        let caseNo = testdata.caseNumber;
-        console.log(caseNo.length);
-        for (let i = 0; i < caseNo.length; i++) {
+        const caseNos = testdata.caseNumber;
+        for (const key in caseNos) {
             await home2.clcikOnGlobalSearch();
-            await home2.enterTheCaseNumber(caseNo[i]);
-            await home2.clickCaseNumber(caseNo[i]);
+            await home2.enterTheCaseNumber(caseNos[key]);
+            await home2.clickCaseNumber(caseNos[key]);
             await home2.valiadateTheCaseDetails();
         }
-
 
     });
 
