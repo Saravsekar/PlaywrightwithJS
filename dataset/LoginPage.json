@@ -1,0 +1,28 @@
+{
+  "username": "ssekar7@tcs.woolworths.com.au.hruat.wow",
+  "password": "Welcome@3",
+  "loginuser": "Govind Misra -",
+  "searchWoolies": "Me@Woolies",
+  "searchPeopleServices": "PeopleServices",
+  "existingCaseNumber": "02917124",
+  "firstName": "Saravanan",
+  "lastName": "Sekar",
+  "employeeId": "1379750",
+  "subject": "Automation Testing",
+  "phoneNumber": "757545676",
+  "email": "ssekar7@tcs.woolworths.com.au",
+  "caseNumber": {
+    "2": "04246575",
+    "3": "04246576",
+    "4": "04246577",
+    "5": "04246578",
+    "6": "04246579",
+    "7": "04246580",
+    "8": "04246581",
+    "9": "04246561",
+    "10": "04246562",
+    "11": "04246563",
+    "12": "04246564",
+    "13": "04246565"
+  }
+}
